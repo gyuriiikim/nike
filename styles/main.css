@@ -1,4 +1,9 @@
-body {background:#000;}
+::-webkit-scrollbar {width:10px; height:10px;}
+::-webkit-scrollbar-track {background:#ccc;}
+::-webkit-scrollbar-thumb {
+    background:#FF9F29; border-radius:5px;
+}
+body {overflow-x:hidden; background:#000;}
 /* -----------------------------------------------------고정 버튼 */
 #top {
     position:fixed; right:0; bottom:0;
@@ -79,7 +84,7 @@ header h1 .logo img {width:100%;} */
 .shoes_wrap .contents p {text-align:center; line-height:2;}
 .shoes_wrap .contents .btn {
     color:#fff;margin-top:50px;
-    background:#888; padding:10px 50px 10px;
+    background:#FF9F29; padding:10px 50px 10px;
     font-size:1.63rem; margin-top:50px;
 }
 /*----------------------------------------------------------신발 배경 */
@@ -121,7 +126,7 @@ header h1 .logo img {width:100%;} */
 }
 .wear_wrap .contents .contents_wrap .btn {
     color:#fff;margin-top:50px;
-    background:#888; padding:10px 50px 10px;
+    background:#FF9F29; padding:10px 50px 10px;
     font-size:1.63rem; 
 }
 /* ------------------------------------------------------------베스트 상품 */
@@ -168,15 +173,21 @@ body .best_wrap, body .new_wrap {background:#fff;}
 /* --------------------------------------------------best 배경 */
 .best_wrap .bg_img1 {
     margin:0 auto; display:block;
-    position:relative; z-index:990;
+    position:relative; z-index:990; display:block;
 }
 .best_wrap .bg_img1 p {
-    width:700px; position:absolute;
-    top:-700px; right:-100; 
+    width:800px; position:absolute;
+    top:-600px; left:-1300px;
 }
 .best_wrap .bg_img1 p img {width:100%;}
-.best_wrap .bg_img2 {}
-.best_wrap .bg_img2 p {width:300px;}
+.best_wrap .bg_img2 {
+    margin:0 auto; display:block;
+    position:relative; z-index:900; display:block;
+}
+.best_wrap .bg_img2 p {
+    width:800px; position:absolute;
+    top:200px; left:600px;
+}
 .best_wrap .bg_img2 p img{width:100%;}
 /* -------------------------------------------------------------- new */
 .new_wrap {
@@ -205,6 +216,7 @@ body .best_wrap, body .new_wrap {background:#fff;}
     flex-flow:row wrap;
     justify-content:space-around;
     padding-left:20px;
+    z-index:900;
 }
 .new_wrap .top .t_right a {
     width:200px; margin-bottom:20px;
@@ -214,7 +226,7 @@ body .best_wrap, body .new_wrap {background:#fff;}
     margin:50px 0;
 }
 .new_wrap .bottom .more {
-    color:#fff; background:#000;
+    color:#fff; background:#FF9F29;
     padding:10px 65px 10px;
     font-size:1.63rem; 
 }
